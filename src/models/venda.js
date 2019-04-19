@@ -16,7 +16,7 @@ const venda = {
   tipoVenda: {
     tipe: String
   },
-  produto: [produtoSchema],
+  produtos: [produtoSchema],
   total: {
     type: Number
   }

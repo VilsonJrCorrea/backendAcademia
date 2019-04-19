@@ -74,7 +74,7 @@ const questionario = {
     outros: {
       type: String
     },
-    indicacao: alunoSchema
+    indicacaoId: String
   }
 }
 const questionarioSchema = createSchema(questionario);
