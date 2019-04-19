@@ -1,0 +1,263 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-04-19T23:51:31.262Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_f26729b4ea4c4acbadf61ae596632f6f",
+			"created": 1551116790921,
+			"description": "",
+			"modified": 1555717742905,
+			"name": "backendAcademia",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_64736305147344038c23ab897206dbf2",
+			"color": null,
+			"created": 1551116790947,
+			"data": {
+				"base_url": "localhost:3000/api/"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1551116790947,
+			"modified": 1555711034173,
+			"name": "New Environment",
+			"parentId": "wrk_f26729b4ea4c4acbadf61ae596632f6f",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_a8cc6dde619541e1aee55022ffd01dc6",
+			"cookies": [
+				{
+					"creation": "2019-04-13T18:06:51.894Z",
+					"domain": "iptvmove.me",
+					"expires": "2020-04-12T18:06:51.000Z",
+					"hostOnly": false,
+					"httpOnly": true,
+					"id": "5211940734366434",
+					"key": "__cfduid",
+					"lastAccessed": "2019-04-13T18:06:51.894Z",
+					"path": "/",
+					"value": "dcb370564cabd11fcbeeef2aa8261abf61555178811"
+				}
+			],
+			"created": 1551116790951,
+			"modified": 1555178811919,
+			"name": "Default Jar",
+			"parentId": "wrk_f26729b4ea4c4acbadf61ae596632f6f",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_279c946f89d14be8ad7d662283430b41",
+			"created": 1555710991381,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1555710991381,
+			"modified": 1555710991381,
+			"name": "backendAcademia",
+			"parentId": "wrk_f26729b4ea4c4acbadf61ae596632f6f",
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_e98be6e52cec4d43bb5665364506adc6",
+			"color": null,
+			"created": 1555711041500,
+			"data": {
+				"base_url": "localhost:3000/api"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1555711041500,
+			"modified": 1555711089917,
+			"name": "dev",
+			"parentId": "env_64736305147344038c23ab897206dbf2",
+			"_type": "environment"
+		},
+		{
+			"_id": "env_6ff45a0567454a74b67b584949bcec90",
+			"color": null,
+			"created": 1555711057724,
+			"data": {
+				"base_url": "localhost:3000/api/"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1555711057724,
+			"modified": 1555711062781,
+			"name": "prod",
+			"parentId": "env_64736305147344038c23ab897206dbf2",
+			"_type": "environment"
+		},
+		{
+			"_id": "fld_6b7c8384b54b4967ab2b04da2a26b8e9",
+			"created": 1555710997068,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1555710997068,
+			"modified": 1555710997068,
+			"name": "alunos",
+			"parentId": "fld_279c946f89d14be8ad7d662283430b41",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_cf50345acf4443628ff489adcfea9b11",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\n}"
+			},
+			"created": 1555711002221,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_a1d0e4b098e546fbacc2e4f6e69a11af",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555711002221,
+			"method": "GET",
+			"modified": 1555711689499,
+			"name": "GET",
+			"parameters": [],
+			"parentId": "fld_6b7c8384b54b4967ab2b04da2a26b8e9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/alunos",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c7e3249893394b92803e253b227b0427",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\":\"Vilson\",\n\t\"dataNascimento\":\"01/01/1996\",\n\t\"sexo\":\"masc\",\n\t\"fone\":\"6592255755\",\n\t\"celular\":\"992255747\",\n\t\"email\":\"vilsonjrcorrea@gmail.com\",\n\t\"cidade\":\"ibirama\",\n\t\"uf\":\"sc\",\n\t\"cep\":\"89140000\",\n\t\"rua\":\"Dr. Getulio Vargas\",\n\t\"numero\":4,\n\t\"bairro\":\"Bela vista\",\n\t\"questionario\":{\n\t\t\"planoSaude\":{\n\t\t\t\"possui\":false,\n\t\t\t\"descricao\":\"\"\n\t\t},\n\t\t\"outroEsporte\":{\n\t\t\t\"pratica\":false,\n\t\t\t\"descricao\":\"\"\n\t\t},\n\t\t\"motivos\":{\n\t\t\t\"aprenderNadar\":false,\n\t\t\t\"bronquite\":false,\n\t\t\t\"coluna\":false,\n\t\t\t\"obsedidade\":false,\n\t\t\t\"treinar\":false,\n\t\t\t\"manterForma\":false,\n\t\t\t\"gestante\":false,\n\t\t\t\"conselhoMedico\":false,\n\t\t\t\"outros\":\"\"\n\t\t},\n\t\"comoConheceuAcademia\":{\n\t\t\"jornal\":false,\n\t\t\"placa\":false,\n\t\t\"cartaz\":false,\n\t\t\"panfleto\":false,\n\t\t\"amigos\":false,\n\t\t\"outdoor\":false,\n\t\t\"internet\":false,\n\t\t\"passandoEmFrente\":false,\n\t\t\"outros\":false\n\t}\n},\n\t\"atividades\":[\n\t\t{\n\t\t\t\"descricao\":\"Agachamento\",\n\t\t\t\"diaSemana\":\"segunda\",\n\t\t\t\"repeticoes\":1,\n\t\t\t\"serie\":10\n\t\t}\n\t],\n\t\"mensalidades\":[\n\t\t{\n\t\t\"descricao\":\"Academia\",\n\t\t\"vencimento\":\"10/10\",\n\t\t\"valor\":100\n\t\t}\n\t]\n}"
+			},
+			"created": 1555712226221,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_1f61cf4aa81c4db8b5169ad870f286e8",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555711002171,
+			"method": "POST",
+			"modified": 1555716894613,
+			"name": "POST",
+			"parameters": [],
+			"parentId": "fld_6b7c8384b54b4967ab2b04da2a26b8e9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/alunos",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9e39cbad3bce47c1be0eef59c839cc86",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\":\"Vilson\",\n\t\"dataNascimento\":\"01/01/1996\",\n\t\"sexo\":\"masc\",\n\t\"fone\":\"6592255755\",\n\t\"celular\":\"992255747\",\n\t\"email\":\"vilsonjrcorrea@gmail.com\",\n\t\"cidade\":\"ibirama\",\n\t\"uf\":\"sc\",\n\t\"cep\":\"89140000\",\n\t\"rua\":\"Dr. Getulio Vargas\",\n\t\"numero\":4,\n\t\"bairro\":\"Bela vista\",\n\t\"questionario\":{\n\t\t\"planoSaude\":{\n\t\t\t\"possui\":false,\n\t\t\t\"descricao\":\"\"\n\t\t},\n\t\t\"outroEsporte\":{\n\t\t\t\"pratica\":false,\n\t\t\t\"descricao\":\"\"\n\t\t},\n\t\t\"motivos\":{\n\t\t\t\"aprenderNadar\":false,\n\t\t\t\"bronquite\":false,\n\t\t\t\"coluna\":false,\n\t\t\t\"obsedidade\":false,\n\t\t\t\"treinar\":false,\n\t\t\t\"manterForma\":false,\n\t\t\t\"gestante\":false,\n\t\t\t\"conselhoMedico\":false,\n\t\t\t\"outros\":\"\"\n\t\t},\n\t\"comoConheceuAcademia\":{\n\t\t\"jornal\":false,\n\t\t\"placa\":false,\n\t\t\"cartaz\":false,\n\t\t\"panfleto\":false,\n\t\t\"amigos\":false,\n\t\t\"outdoor\":false,\n\t\t\"internet\":false,\n\t\t\"passandoEmFrente\":false,\n\t\t\"outros\":false\n\t}\n},\n\t\"atividades\": [\n   \n  ],\n  \"mensalidades\": [\n  \n  ]\n}"
+			},
+			"created": 1555713450308,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_0e0b553c2eff472c9a95c208827703c5",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555711002121,
+			"method": "PUT",
+			"modified": 1555717628808,
+			"name": "PUT",
+			"parameters": [],
+			"parentId": "fld_6b7c8384b54b4967ab2b04da2a26b8e9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/alunos/5cba5df16a6ee3387ce6e380",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5a7b13b14659469b959edeece553f3a9",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\n}\n"
+			},
+			"created": 1555717283580,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_a1d0e4b098e546fbacc2e4f6e69a11af",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1555711002196,
+			"method": "GET",
+			"modified": 1555717634800,
+			"name": "GET One",
+			"parameters": [],
+			"parentId": "fld_6b7c8384b54b4967ab2b04da2a26b8e9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/alunos/5cba5df16a6ee3387ce6e380",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4cef9ce81d36457c8e5e740f85ae18e9",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\":\"Vilson\",\n\t\"dataNascimento\":\"01/01/1996\",\n\t\"sexo\":\"masc\",\n\t\"fone\":\"6592255755\",\n\t\"celular\":\"992255747\",\n\t\"email\":\"vilsonjrcorrea@gmail.com\",\n\t\"cidade\":\"ibirama\",\n\t\"uf\":\"sc\",\n\t\"cep\":\"89140000\",\n\t\"rua\":\"Dr. Getulio Vargas\",\n\t\"numero\":4,\n\t\"bairro\":\"Bela vista\",\n\t\"questionario\":{\n\t\t\"planoSaude\":{\n\t\t\t\"possui\":false,\n\t\t\t\"descricao\":\"\"\n\t\t},\n\t\t\"outroEsporte\":{\n\t\t\t\"pratica\":false,\n\t\t\t\"descricao\":\"\"\n\t\t},\n\t\t\"motivos\":{\n\t\t\t\"aprenderNadar\":false,\n\t\t\t\"bronquite\":false,\n\t\t\t\"coluna\":false,\n\t\t\t\"obsedidade\":false,\n\t\t\t\"treinar\":false,\n\t\t\t\"manterForma\":false,\n\t\t\t\"gestante\":false,\n\t\t\t\"conselhoMedico\":false,\n\t\t\t\"outros\":\"\"\n\t\t},\n\t\"comoConheceuAcademia\":{\n\t\t\"jornal\":false,\n\t\t\"placa\":false,\n\t\t\"cartaz\":false,\n\t\t\"panfleto\":false,\n\t\t\"amigos\":false,\n\t\t\"outdoor\":false,\n\t\t\"internet\":false,\n\t\t\"passandoEmFrente\":false,\n\t\t\"outros\":false\n\t}\n},\n\t\"atividades\": [\n   \n  ],\n  \"mensalidades\": [\n  \n  ]\n}"
+			},
+			"created": 1555717560779,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_0e0b553c2eff472c9a95c208827703c5",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1554984284394.5,
+			"method": "DELETE",
+			"modified": 1555717624241,
+			"name": "DELETE",
+			"parameters": [],
+			"parentId": "fld_6b7c8384b54b4967ab2b04da2a26b8e9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/alunos/5cba5df16a6ee3387ce6e380",
+			"_type": "request"
+		}
+	]
+}
