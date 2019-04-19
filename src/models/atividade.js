@@ -6,5 +6,5 @@ const schema = createSchema(atividade);
 const Atividade = createModel('Atividade', schema);
 
 module.exports = {
-    Atividade
+  Atividade
 }

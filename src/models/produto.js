@@ -2,9 +2,10 @@ const { createSchema, createModel } = require('../db/index')
 const produto = {
 
 }
-const schema = createSchema(produto);
-const Produto = createModel('Produto', schema);
+const produtoSchema = createSchema(produto);
+const Produto = createModel('Produto', produtoSchema);
 
 module.exports = {
-    Produto
+  Produto,
+  produtoSchema
 }

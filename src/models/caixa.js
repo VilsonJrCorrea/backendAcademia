@@ -6,5 +6,5 @@ const schema = createSchema(caixa);
 const Caixa = createModel('Caixa', schema);
 
 module.exports = {
-    Caixa
+  Caixa
 }
