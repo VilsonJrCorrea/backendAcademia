@@ -1,10 +1,19 @@
 const { createSchema, createModel } = require('../db/index')
 const banco = {
-
+  nome: {
+    type: String
+  },
+  agencia: {
+    type: String
+  },
+  conta: {
+    type: String
+  }
 }
-const schema = createSchema(banco);
-const Banco = createModel('Banco', schema);
+const bancoSchema = createSchema(banco);
+const Banco = createModel('Banco', bancoSchema);
 
 module.exports = {
-  Banco
+  Banco,
+  bancoSchema
 }

@@ -1,11 +1,14 @@
 const { createSchema, createModel } = require('../db/index')
-const produtoSchema = require('./produto')
+const {produtoSchema} = require('./produto')
 const comercio = {
+  nome: {
+    type: String
+  },
   produtos: [produtoSchema],
 }
 const schema = createSchema(comercio);
-const Venda = createModel('Comercio', schema);
+const Comercio = createModel('Comercio', schema);
 
 module.exports = {
-  Venda
+  Comercio
 }

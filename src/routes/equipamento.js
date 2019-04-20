@@ -1,23 +1,37 @@
 const express = require('express');
 const router = express.Router();
-
-router.get('/', (req, res) => {
-
+const { Equipamento } = require('../models/equipamento')
+const defaultMessageError = { message: "Equipamento não encontrado" };
+router.get('/', async (req, res) => {
+  res.send(await Equipamento.find());
 });
 
-router.post('/', (req, res) => {
-
+router.post('/', async (req, res) => {
+  res.send(await Equipamento.create(req.body));
 })
 
-router.put('/:id', (req, res) => {
-
+router.put('/:id', async (req, res) => {
+  let equipamento = await Equipamento.findById(req.params.id);
+  if (!equipamento) return res.status(404).send(defaultMessageError);
+  newObject = updateObject(equipamento, req.body);
+  res.send(await Equipamento.findByIdAndUpdate(req.params.id, newObject, { new: true }))
 })
 
-router.get('/:id', (req, res) => {
-
+router.get('/:id', async (req, res) => {
+  let equipamento = await Equipamento.findById(req.params.id);
+  if (!equipamento) return res.status(404).send(defaultMessageError)
+  res.send(equipamento);
 })
 
-router.delete('/:id', (req, res) => {
-
+router.delete('/:id', async (req, res) => {
+  let equipamento = await Equipamento.findByIdAndRemove(req.params.id);
+  if (!equipamento) return res.status(404).send(defaultMessageError);
+  res.send(equipamento);
 })
 module.exports = router;
+
+function updateObject(object, oldObject) {
+  return {
+    nome: object.nome ? object.nome : oldObject.nome
+  }
+}

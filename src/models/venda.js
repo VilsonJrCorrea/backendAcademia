@@ -1,19 +1,18 @@
 const { createSchema, createModel } = require('../db/index')
-const alunoSchema = require('./aluno')
-const produtoSchema = require('./produto')
+const { produtoSchema } = require('./produto')
 const venda = {
   cliente: {
     eAluno: {
       type: Boolean
     },
-    descricao: {
-      aluno: alunoSchema
+    idAluno: {
+      type: String
     }
   },
   data: {
     type: String
   },
-  tipoVenda: {
+  idComercio: {
     tipe: String
   },
   produtos: [produtoSchema],
