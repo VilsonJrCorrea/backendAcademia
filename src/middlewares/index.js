@@ -1,6 +1,7 @@
 const express = require('express');
-const app = express();
 const cors = require('cors');
+const app = express();
+
 const aluno = require('../routes/aluno')
 const comercio = require('../routes/comercio')
 const equipamento = require('../routes/equipamento')

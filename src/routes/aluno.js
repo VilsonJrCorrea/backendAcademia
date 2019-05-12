@@ -50,7 +50,7 @@ function updateObject(oldObject, object) {
     cep: object.cep ? object.cep : oldObject.cep,
     rua: object.rua ? object.rua : oldObject.rua,
     numero: object.numero ? object.numero : oldObject.numero,
-    bairro: object.numero ? object.numero : oldObject.numero,
+    bairro: object.bairro ? object.bairro : oldObject.bairro,
     questionario: object.questionario ? object.questionario : oldObject.questionario,
     atividades: object.atividades ? object.atividades : oldObject.atividades,
     mensalidades: object.mensalidades ? object.mensalidades : oldObject.mensalidades
