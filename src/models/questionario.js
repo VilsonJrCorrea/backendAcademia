@@ -3,7 +3,7 @@ const alunoSchema = require('./aluno')
 const questionario = {
   planoSaude: {
     possui: {
-      type: Boolean
+      type: String
     },
     descricao: {
       type: String
@@ -11,7 +11,7 @@ const questionario = {
   },
   outroEsporte: {
     pratica: {
-      type: Boolean
+      type: String
     },
     descricao: {
       type: String
