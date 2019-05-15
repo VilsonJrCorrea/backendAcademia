@@ -19,28 +19,28 @@ const questionario = {
   },
   motivos: {
     aprenderNadar: {
-      type: Boolean
+      type: String
     },
     bronquite: {
-      type: Boolean
+      type: String
     },
     coluna: {
-      type: Boolean
+      type: String
     },
     obesidade: {
-      type: Boolean
+      type: String
     },
     treinar: {
-      type: Boolean
+      type: String
     },
     manterForma: {
-      type: Boolean
+      type: String
     },
     gestante: {
-      type: Boolean
+      type: String
     },
     conselhoMedico: {
-      type: Boolean
+      type: String
     },
     outros: {
       type: String
@@ -48,28 +48,28 @@ const questionario = {
   },
   comoConheceuAcademia: {
     jornal: {
-      type: Boolean
+      type: String
     },
     placa: {
-      type: Boolean
+      type: String
     },
     cartaz: {
-      type: Boolean
+      type: String
     },
     planfleto: {
-      type: Boolean
+      type: String
     },
     amigos: {
-      type: Boolean
+      type: String
     },
     outdoor: {
-      type: Boolean
+      type: String
     },
     internet: {
-      type: Boolean
+      type: String
     },
     passandoEmFrente: {
-      type: Boolean
+      type: String
     },
     outros: {
       type: String
