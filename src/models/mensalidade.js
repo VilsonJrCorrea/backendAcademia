@@ -1,5 +1,8 @@
 const { createSchema, createModel } = require('../db/index')
 const mensalidade = {
+  _id: {
+    type: String
+  },
   vencimento: {
     type: String
   },

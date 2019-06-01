@@ -1,5 +1,8 @@
 const { createSchema, createModel } = require('../db/index')
 const atividade = {
+  _id: {
+    type: String
+  },
   descricao: {
     type: String
   },
