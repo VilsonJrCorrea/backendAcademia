@@ -1,5 +1,6 @@
 const { createSchema, createModel } = require('../db/index')
 const produto = {
+  _id: { type: String },
   descricao: { type: String },
   preco: { type: Number }
 }
