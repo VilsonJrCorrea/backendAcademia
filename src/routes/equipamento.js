@@ -30,8 +30,10 @@ router.delete('/:id', async (req, res) => {
 })
 module.exports = router;
 
-function updateObject(object, oldObject) {
+function updateObject(oldObject, object) {
   return {
-    nome: object.nome ? object.nome : oldObject.nome
+    nome: object.nome ? object.nome : oldObject.nome,
+    quantidade: object.quantidade ? object.quantidade : oldObject.quantidade,
+    preco: object.preco ? object.preco : oldObject.preco
   }
 }
