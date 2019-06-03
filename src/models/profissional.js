@@ -1,10 +1,13 @@
 const { createSchema, createModel } = require('../db/index')
 const profissional = {
+  cpf: {
+    type: String
+  },
   nome: {
     type: String
   },
-  idAlunos: {
-    type: Array
+  alunos: {
+    type: Array 
   }
 }
 const schema = createSchema(profissional);

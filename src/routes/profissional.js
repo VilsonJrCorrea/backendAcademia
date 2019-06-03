@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { Profissional } = require('../models/profissional')
 const messageDefaultError = { message: "Profissional não encontrado" };
+const middlewareGetAlunos = require('../middlewares/middewareGetAlunos');
 
 router.get('/', async (req, res) => {
   res.send(await Profissional.find());
@@ -18,22 +19,24 @@ router.put('/:id', async (req, res) => {
   res.send(await Profissional.findByIdAndUpdate(req.params.id, newObject, { new: true }));
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res, next) => {
   const profissional = await Profissional.findById(req.params.id);
   if (!profissional) return res.status(404).send(messageDefaultError);
-  res.send(profissional);
-})
+  next(profissional);
+}, [middlewareGetAlunos])
 
 router.delete('/:id', async (req, res) => {
   const profissional = await Profissional.findByIdAndDelete(req.params.id);
   if (!profissional) return res.status(404).send(messageDefaultError);
   res.send(profissional);
 })
-module.exports = router;
 
 function updateObject(object, oldObject) {
   return {
     nome: object.nome ? object.nome : oldObject.nome,
-    idAlunos: object.alunos ? object.idAlunos : oldObject.idAlunos
+    cpf: object.cpf ? object.cpf : oldObject.cpf,
+    alunos: object.alunos ? object.alunos : oldObject.alunos
   }
 }
+
+module.exports = router;
